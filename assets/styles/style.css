@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: inline;
+}
+
+/* navbar navigasi */
+nav {
+  background-image: linear-gradient(to right top, #8b7e74, #9b8d7f, #aa9c8a, #b9ac95, #c7bca1);
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  padding-inline: 4rem;
+
+  display: flex;
+  gap: 2rem;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+/* navbar tulisan*/
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* konten untuk mengatur posisi profile card */
+aside {
+  flex: 1;
+  /* float: right;
+  width: 25%;
+  padding-left: 20px; */
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  color: #fff;
+  background-image: linear-gradient(to right top, #8b7e74, #9b8d7f, #aa9c8a, #b9ac95, #c7bca1);
+  text-align: center;
+  /* text-align: center;
+  font-weight: bold; */
+}
+
+h2,
+h3 {
+  color: #b99b6b;
+  /* #8b7e74; */
+}
+
+#content {
+  flex: 5;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+  /*float: left;
+  width: 75%;*/
+}
+
+/* membuat jumbotron */
+.jumbotron {
+  background-image: url(../image/Cover\ Susu.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 10em;
+  bottom: 0;
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 200px 0 300px;
+  /* background-color: #00c8eb;*/
+}
+
+/* logo bandung */
+.profile header {
+  text-align: center;
+}
+
+/* gambar konten*/
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Foto Profil*/
+.profile img {
+  width: 200px;
+  justify-content: center;
+}
+
+.img-wrapper {
+  width: 200px;
+  height: 200px;
+  box-shadow: 5px 5px 20px grey;
+  border-radius: 50%;
+}
+
+.img-circle-wrapper {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Icon Social Media */
+.icons {
+  display: flex;
+  position: relative;
+  top: 10%;
+  left: 10%;
+  transform: translate(-10%, -10%);
+  justify-content: center;
+}
+
+.icons a {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  line-height: 60px;
+  margin: 0 15px;
+  border-radius: 50%;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+}
+
+.icons a:hover {
+  color: white;
+  transform: translate(0, -30px);
+  box-shadow: 0 20px 8px rgba(0, 0, 0, 0.7);
+}
+
+.icons a:nth-child(1):hover {
+  background-color: #2c3e50;
+}
+
+.icons a:nth-child(2):hover {
+  background-color: #3498db;
+}
+
+.icons a:nth-child(3):hover {
+  background-image: linear-gradient(to right top, #d65db1, #ff6e91, #ff9671, #ffc75f, #f9f871);
+}
+
+/* card style konten*/
+.card {
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  margin-top: 20px; */
+}
+
+/* untuk menetapkan Rules pada ukuran layar terntu agar responsif */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+  main aside {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
